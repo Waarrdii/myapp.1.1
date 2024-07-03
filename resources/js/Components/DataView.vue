@@ -24,7 +24,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700" v-for="data in dataTable">
+                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700" v-for="data in dataTable" :key="data.id">
                         <td class="px-6 py-3">
                             <Checkbox name="selectData" :checked="isChecked"></Checkbox>
                         </td>
