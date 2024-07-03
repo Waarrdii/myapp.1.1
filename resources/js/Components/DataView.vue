@@ -24,10 +24,9 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700" v-for="data in dataTable"
-                        :key="id">
+                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700" v-for="data in dataTable">
                         <td class="px-6 py-3">
-                            <Checkbox name="selectData"></Checkbox>
+                            <Checkbox name="selectData" :checked="isChecked"></Checkbox>
                         </td>
                         <td 
                         class="px-6 py-3"
@@ -54,7 +53,7 @@ const props = defineProps({
     headerColumn: Array,
 })
 
-
+let isChecked = ref(false);
 let ascendingOrder = ref(true);
 let sortedColumn = ref(null);
 const sortableData = ref(null);
